@@ -15,3 +15,27 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        #Hibernate Dialect Hibernate ko batata hai ki kaunsa database (MySQL, PostgreSQL, Oracle, etc.) use ho raha hai, taaki Hibernate us database ke according SQL queries generate kar sake.
+        #Example:
+
+        # - Tum Java me likhte ho:
+
+        #         userRepository.findAll();
+
+        # - Hibernate isko SQL me convert karta hai.
+
+        # - MySQL ke liye:
+
+        #          SELECT * FROM user;
+
+        # - PostgreSQL ke liye kuch queries thodi different ho sakti hain.
+
+        # - Hibernate ko kaise pata chale ki kis database ke rules use karne hain?
+
+        # - Isliye:
+
+        #           hibernate:
+        #               dialect: org.hibernate.dialect.MySQL8Dialect
